@@ -18,7 +18,7 @@ def index():
         todos = Todos.query.order_by(Todos.complete).all()
     else:
         todos = Todos.query.all()
-    return render_template('index.html', title="Don't Worry, Be Happy", todos=todos, form=form, totals=totals)
+    return render_template('index.html', title="Davros B's Harp List", todos=todos, form=form, totals=totals)
 
 @app.route('/add', methods=['POST', 'GET'])
 def add():
@@ -57,7 +57,7 @@ def update(id):
         return redirect(url_for('index'))
     elif request.method == 'GET':
         form.task.data = todo.task
-    return render_template('update.html', title='Update your todo', form=form)
+    return render_template('update.html', title='Update your harp', form=form)
 
 @app.route('/delete/<int:id>')
 def delete(id):
