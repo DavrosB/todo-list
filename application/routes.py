@@ -57,7 +57,7 @@ def update(id):
         return redirect(url_for('index'))
     elif request.method == 'GET':
         form.task.data = todo.task
-    return render_template('update.html', title='Update your harp', form=form)
+    return render_template('update.html', title='Update your harp list', form=form)
 
 @app.route('/delete/<int:id>')
 def delete(id):
